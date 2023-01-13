@@ -7,12 +7,14 @@ public class Main {
         Rectangle rectangle1 = new Rectangle(3, 4.5);
         Circle circle1 = new Circle(5);
         Triangle triangle1 = new Triangle(2.5, 4, 5.5);
-        ShapeCalculator calc = new ShapeCalculator();
-        System.out.println("Kwadrat o boku a = " + square1.a + " ma pole = " + calc.calculateSquareArea(square1));
-        System.out.println("Prostokat o bokach a = " + rectangle1.a + ", b = " + rectangle1.b + " ma obwod = "
-                + calc.calculateRectPerimeter(rectangle1));
-        System.out.println("Kolo o promieniu r = " + circle1.r + " ma pole = " + calc.calculateCircleArea(circle1));
-        System.out.println("Trojkat o bokach a = " + triangle1.a + ", b = " + triangle1.b + ", c = " + triangle1.c
-                + " ma obwod = " + calc.calculateTrianglePerimeter(triangle1));
+        System.out.println("Kwadrat o boku a = " + square1.getA() + " ma pole = "
+                + square1.calculateSquareArea(square1.getA()));
+        System.out.println("Prostokat o bokach a = " + rectangle1.getA() + ", b = " + rectangle1.getB() + " ma obwod = "
+                + rectangle1.calculateRectPerimeter(rectangle1.getA(), rectangle1.getB()));
+        System.out.println("Kolo o promieniu r = " + circle1.getR() + " ma pole = "
+                + circle1.calculateCircleArea(circle1.getR()));
+        System.out.println("Trojkat o bokach a = " + triangle1.getA() + ", b = " + triangle1.getB() + ", c = "
+                + triangle1.getC() + " ma obwod = " + triangle1.calculateTrianglePerimeter(triangle1.getA(),
+                triangle1.getB(), triangle1.getC()));
     }
 }
